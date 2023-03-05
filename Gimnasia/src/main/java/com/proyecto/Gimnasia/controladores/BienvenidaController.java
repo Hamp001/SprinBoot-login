@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-//http://192.168.1.71:8080/Bienvenida
+//http://ip:8080/Bienvenida
 @Controller
 public class BienvenidaController {
     @GetMapping("/Bienvenida")
