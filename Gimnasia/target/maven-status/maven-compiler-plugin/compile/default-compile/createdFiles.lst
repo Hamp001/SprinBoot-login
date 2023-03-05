@@ -1,0 +1,13 @@
+com\proyecto\Gimnasia\Servicios\EnviarEmail.class
+com\proyecto\Gimnasia\controladores\RegistrarController.class
+com\proyecto\Gimnasia\Servicios\IngresarService.class
+com\proyecto\Gimnasia\repositorios\IngresarRepositorio.class
+com\proyecto\Gimnasia\ServletInitializer.class
+com\proyecto\Gimnasia\controladores\IngresarController.class
+com\proyecto\Gimnasia\Servicios\RegistrosService.class
+com\proyecto\Gimnasia\Modelos\Ingresar.class
+com\proyecto\Gimnasia\Modelos\Registrar.class
+com\proyecto\Gimnasia\controladores\BienvenidaController.class
+com\proyecto\Gimnasia\repositorios\RegistrosRepositorio.class
+com\proyecto\Gimnasia\GimnasiaApplication.class
+com\proyecto\Gimnasia\Prueba.class

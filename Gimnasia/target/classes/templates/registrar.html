@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <title>Registrar</title>
+    <link rel="shortcut icon" href="#"/>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!--sweet alert-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript"  src="/js/Registrar.js"></script>
+
+</head>
+<body onsubmit="submit()">
+<h1> <p align="center">Registrar</p></h1>
+<form  action="#"  th:action="@{/registrar}" th:object="${registrar}" name="f1" id="f1" method="post">
+    <p align="center"  class="col-sm-6 offset-sm-3">
+        Nombre: <input type="text" id="nombre" name="nombre" th:field="*{nombre}" class="form-control" th:errorclass="'form-control alert-danger'" />
+        <small class="form-text text-danger" th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></small><br><br>
+
+        Email:<input type="text" id="email" name="email" th:field="*{email}"  class="form-control" th:errorclass="'form-control alert-danger'"/>
+        <small class="form-text text-danger" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></small><br><br>
+
+        Contraseña:<input type="password" id="contra" name="contra" th:field="*{contra}"  class="form-control" th:errorclass="'form-control alert-danger'"/>
+        <small class="form-text text-danger" th:if="${#fields.hasErrors('contra')}" th:errors="*{contra}"></small><br><br>
+
+        Confirmar contraseña:<input type="password" id="confirmContra" name="confirmContra" th:field="*{confirmContra}"  class="form-control" th:errorclass="'form-control alert-danger'" />
+        <small class="form-text text-danger" th:if="${#fields.hasErrors('confirmContra')}"  th:errors="*{confirmContra}" ></small><br><br>
+    </p>
+
+    <p align="center">
+        <input type="submit" name="Registrar" value="Registrar" onclick="sonIguales();"/>
+        <input type="reset" value="Limpiar datos"/>
+    </p>
+</form>
+</body>
+</html>
